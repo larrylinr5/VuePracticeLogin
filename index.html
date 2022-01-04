@@ -72,7 +72,7 @@
                 //存放token 只需要設定一次
                 const tempToken = document.cookie.replace(/(?:(?:^|.*;\s*)larryToken\s*\=\s*([^;]*).*$)|^.*$/, "$1")
                 //axios預設headers
-                axios.defaults.headers.common['Authorization'] = token;//應該要放tempToken才對
+                axios.defaults.headers.common['Authorization'] = tempToken;
             })
             // 失敗的結果
             .catch(error=>{
